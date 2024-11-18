@@ -1,0 +1,15 @@
+filebeat.modules:
+  - module: system
+    syslog:
+      enabled: true
+      var.paths: ["/var/log/syslog*"]
+  - module: system
+    auth:
+      enabled: true
+      var.paths: ["/var/log/auth.log*"]
+output.elasticsearch:
+  hosts: "http://elasticsearch:9200"
+#  username: "elastic"
+#  password: "CNk6jg4usvM3PdWN"
+setup.kibana:
+  host: "http://kibana:5601"
