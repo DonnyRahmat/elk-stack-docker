@@ -86,7 +86,7 @@ services:
       elasticsearch:
         condition: service_healthy
       kibana:
-        condition: service_started
+        condition: service_healthy
 
 networks:
   elk_networks:
