@@ -1,0 +1,398 @@
+Oct 22 19:06:34 master1 useradd[934]: new group: name=donny, GID=1000
+Oct 22 19:06:34 master1 useradd[934]: new user: name=donny, UID=1000, GID=1000, home=/home/donny, shell=/bin/bash, from=none
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to group 'adm'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to group 'cdrom'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to group 'sudo'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to group 'dip'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to group 'plugdev'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to group 'lxd'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to shadow group 'adm'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to shadow group 'cdrom'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to shadow group 'sudo'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to shadow group 'dip'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to shadow group 'plugdev'
+Oct 22 19:06:34 master1 useradd[934]: add 'donny' to shadow group 'lxd'
+Oct 22 19:06:34 master1 systemd-logind[962]: New seat seat0.
+Oct 22 19:06:34 master1 systemd-logind[962]: Watching system buttons on /dev/input/event0 (Power Button)
+Oct 22 19:06:34 master1 systemd-logind[962]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Oct 22 19:06:37 master1 useradd[1321]: new user: name=lxd, UID=999, GID=100, home=/var/snap/lxd/common/lxd, shell=/bin/false, from=none
+Oct 22 19:06:37 master1 sshd[1492]: Server listening on 0.0.0.0 port 22.
+Oct 22 19:06:37 master1 sshd[1492]: Server listening on :: port 22.
+Oct 22 19:06:53 master1 sshd[1492]: Received signal 15; terminating.
+Oct 22 19:06:53 master1 sshd[1550]: Server listening on 0.0.0.0 port 22.
+Oct 22 19:06:53 master1 sshd[1550]: Server listening on :: port 22.
+Oct 22 12:11:41 master1 login[1017]: pam_unix(login:session): session opened for user donny(uid=1000) by LOGIN(uid=0)
+Oct 22 12:11:41 master1 systemd-logind[962]: New session 1 of user donny.
+Oct 22 12:11:41 master1 systemd: pam_unix(systemd-user:session): session opened for user donny(uid=1000) by (uid=0)
+Oct 22 12:11:46 master1 sudo: pam_unix(sudo:auth): conversation failed
+Oct 22 12:11:46 master1 sudo: pam_unix(sudo:auth): auth could not identify password for [donny]
+Oct 22 12:11:53 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/su -
+Oct 22 12:11:53 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Oct 22 12:11:53 master1 su: (to root) root on pts/0
+Oct 22 12:11:53 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by donny(uid=0)
+Oct 22 12:17:01 master1 CRON[1739]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 22 12:17:01 master1 CRON[1739]: pam_unix(cron:session): session closed for user root
+Oct 22 13:17:01 master1 CRON[2203]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 22 13:17:01 master1 CRON[2203]: pam_unix(cron:session): session closed for user root
+Oct 22 13:23:41 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 05:37:08 master1 sshd[884]: Server listening on 0.0.0.0 port 22.
+Nov 18 05:37:08 master1 sshd[884]: Server listening on :: port 22.
+Nov 18 05:37:09 master1 systemd-logind[848]: New seat seat0.
+Nov 18 05:37:09 master1 systemd-logind[848]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 18 05:37:09 master1 systemd-logind[848]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 18 05:37:17 master1 login[859]: pam_unix(login:auth): check pass; user unknown
+Nov 18 05:37:17 master1 login[859]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+Nov 18 05:37:20 master1 login[859]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Nov 18 05:37:28 master1 login[1038]: pam_unix(login:auth): check pass; user unknown
+Nov 18 05:37:28 master1 login[1038]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+Nov 18 05:37:31 master1 login[1038]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+Nov 18 05:37:40 master1 login[1038]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=donny
+Nov 18 05:37:42 master1 login[1038]: FAILED LOGIN (2) on '/dev/tty1' FOR 'donny', Authentication failure
+Nov 18 05:37:46 master1 login[1038]: pam_unix(login:session): session opened for user donny(uid=1000) by LOGIN(uid=0)
+Nov 18 05:37:46 master1 systemd-logind[848]: New session 1 of user donny.
+Nov 18 05:37:46 master1 systemd: pam_unix(systemd-user:session): session opened for user donny(uid=1000) by (uid=0)
+Nov 18 05:39:21 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/sbin/useradd -m projects
+Nov 18 05:39:21 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Nov 18 05:39:21 master1 useradd[1190]: new group: name=projects, GID=1001
+Nov 18 05:39:21 master1 useradd[1190]: new user: name=projects, UID=1001, GID=1001, home=/home/projects, shell=/bin/sh, from=/dev/pts/0
+Nov 18 05:39:21 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 05:39:28 master1 su: pam_unix(su-l:auth): authentication failure; logname=donny uid=1000 euid=0 tty=/dev/tty1 ruser=donny rhost=  user=projects
+Nov 18 05:39:30 master1 su: FAILED SU (to projects) donny on tty1
+Nov 18 05:39:37 master1 passwd[1202]: passwd: can't view or modify password information for projects
+Nov 18 05:39:58 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/passwd projects
+Nov 18 05:39:58 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Nov 18 05:40:03 master1 passwd[1205]: pam_unix(passwd:chauthtok): password changed for projects
+Nov 18 05:40:03 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 05:40:08 master1 su: (to projects) donny on tty1
+Nov 18 05:40:08 master1 su: pam_unix(su-l:session): session opened for user projects(uid=1001) by donny(uid=1000)
+Nov 18 05:40:24 master1 su: pam_unix(su-l:session): session closed for user projects
+Nov 18 05:40:27 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 05:40:27 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Nov 18 05:40:27 master1 su: (to root) root on pts/0
+Nov 18 05:40:27 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by donny(uid=0)
+Nov 18 05:41:34 master1 su: (to projects) root on pts/0
+Nov 18 05:41:34 master1 su: pam_unix(su-l:session): session opened for user projects(uid=1001) by donny(uid=0)
+Nov 18 05:42:14 master1 su: pam_unix(su-l:session): session closed for user projects
+Nov 18 05:42:34 master1 usermod[1251]: change user 'projects' shell from '/bin/sh' to '/bin/bash'
+Nov 18 05:42:43 master1 su: (to projects) root on pts/0
+Nov 18 05:42:43 master1 su: pam_unix(su-l:session): session opened for user projects(uid=1001) by donny(uid=0)
+Nov 18 05:45:55 master1 sshd[1281]: Accepted password for projects from 192.168.18.28 port 51756 ssh2
+Nov 18 05:45:55 master1 sshd[1281]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 05:45:55 master1 systemd-logind[848]: New session 3 of user projects.
+Nov 18 05:45:55 master1 systemd: pam_unix(systemd-user:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 05:51:28 master1 sudo: projects : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su
+Nov 18 05:51:36 master1 sudo: projects : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 05:51:43 master1 su: pam_unix(su-l:session): session closed for user projects
+Nov 18 05:51:46 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 05:51:46 master1 sshd[1281]: pam_unix(sshd:session): session closed for user projects
+Nov 18 06:35:56 master1 sshd[885]: Server listening on 0.0.0.0 port 22.
+Nov 18 06:35:56 master1 sshd[885]: Server listening on :: port 22.
+Nov 18 06:35:56 master1 systemd-logind[853]: New seat seat0.
+Nov 18 06:35:56 master1 systemd-logind[853]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 18 06:35:56 master1 systemd-logind[853]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 18 06:35:56 master1 sshd[930]: Accepted password for projects from 192.168.18.28 port 53563 ssh2
+Nov 18 06:35:56 master1 sshd[930]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 06:35:56 master1 systemd-logind[853]: New session 1 of user projects.
+Nov 18 06:35:57 master1 systemd: pam_unix(systemd-user:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 06:36:21 master1 sudo: projects : user NOT in sudoers ; TTY=pts/0 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 06:36:37 master1 su: (to donny) projects on pts/0
+Nov 18 06:36:37 master1 su: pam_unix(su-l:session): session opened for user donny(uid=1000) by projects(uid=1001)
+Nov 18 06:36:42 master1 sudo:    donny : TTY=pts/0 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 06:36:42 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1000)
+Nov 18 06:36:42 master1 su: (to root) root on pts/1
+Nov 18 06:36:42 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by donny(uid=0)
+Nov 18 06:36:51 master1 usermod[1252]: add 'projects' to group 'sudo'
+Nov 18 06:36:51 master1 usermod[1252]: add 'projects' to shadow group 'sudo'
+Nov 18 06:36:55 master1 su: (to projects) root on pts/1
+Nov 18 06:36:55 master1 su: pam_unix(su-l:session): session opened for user projects(uid=1001) by donny(uid=0)
+Nov 18 06:37:00 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 06:37:00 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:00 master1 su: (to root) root on pts/2
+Nov 18 06:37:00 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:37:13 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 06:37:13 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:29 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove docker.io
+Nov 18 06:37:29 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:30 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:30 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove docker-doc
+Nov 18 06:37:30 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:31 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:31 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove docker-compose
+Nov 18 06:37:31 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:31 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:31 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove docker-compose-v2
+Nov 18 06:37:31 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:31 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:32 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove podman-docker
+Nov 18 06:37:32 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:32 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:32 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove containerd
+Nov 18 06:37:32 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:33 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:33 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt-get remove runc
+Nov 18 06:37:33 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:33 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:37:50 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 06:37:50 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1001)
+Nov 18 06:37:50 master1 su: (to root) root on pts/2
+Nov 18 06:37:50 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:37:54 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get update
+Nov 18 06:37:54 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:38:15 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:38:18 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install ca-certificates curl
+Nov 18 06:38:18 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:38:18 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:38:26 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/install -m 0755 -d /etc/apt/keyrings
+Nov 18 06:38:26 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:38:26 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:38:31 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+Nov 18 06:38:31 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:38:42 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:38:47 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/chmod a+r /etc/apt/keyrings/docker.asc
+Nov 18 06:38:47 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:38:47 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:38:55 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee /etc/apt/sources.list.d/docker.list
+Nov 18 06:38:55 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:38:55 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 06:39:00 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get update
+Nov 18 06:39:00 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 06:50:15 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 07:17:01 master1 CRON[2381]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 07:17:01 master1 CRON[2381]: pam_unix(cron:session): session closed for user root
+Nov 18 08:17:01 master1 CRON[2401]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 08:17:01 master1 CRON[2401]: pam_unix(cron:session): session closed for user root
+Nov 18 08:35:32 master1 sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Nov 18 08:35:32 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 08:40:09 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 08:40:44 master1 login[2479]: pam_unix(login:session): session opened for user donny(uid=1000) by LOGIN(uid=0)
+Nov 18 08:40:44 master1 systemd-logind[853]: New session 5 of user donny.
+Nov 18 08:40:44 master1 systemd: pam_unix(systemd-user:session): session opened for user donny(uid=1000) by (uid=0)
+Nov 18 08:40:48 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 08:40:48 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Nov 18 08:40:48 master1 su: (to root) root on pts/3
+Nov 18 08:40:48 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by donny(uid=0)
+Nov 18 08:46:40 master1 sshd[930]: pam_unix(sshd:session): session closed for user projects
+Nov 18 08:46:40 master1 su: pam_unix(su-l:session): session closed for user donny
+Nov 18 08:46:40 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 08:46:40 master1 su: pam_unix(su-l:session): session closed for user projects
+Nov 18 08:46:40 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 08:46:40 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 08:46:40 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 08:46:40 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 08:49:02 master1 sshd[915]: Server listening on 0.0.0.0 port 22.
+Nov 18 08:49:02 master1 sshd[915]: Server listening on :: port 22.
+Nov 18 08:49:02 master1 systemd-logind[877]: New seat seat0.
+Nov 18 08:49:02 master1 systemd-logind[877]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 18 08:49:02 master1 systemd-logind[877]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 18 08:49:42 master1 login[889]: pam_unix(login:session): session opened for user donny(uid=1000) by LOGIN(uid=0)
+Nov 18 08:49:42 master1 systemd-logind[877]: New session 1 of user donny.
+Nov 18 08:49:42 master1 systemd: pam_unix(systemd-user:session): session opened for user donny(uid=1000) by (uid=0)
+Nov 18 08:49:48 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 08:49:48 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Nov 18 08:49:48 master1 su: (to root) root on pts/0
+Nov 18 08:49:48 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by donny(uid=0)
+Nov 18 08:55:38 master1 sshd[878]: Server listening on 0.0.0.0 port 22.
+Nov 18 08:55:38 master1 sshd[878]: Server listening on :: port 22.
+Nov 18 08:55:38 master1 systemd-logind[847]: New seat seat0.
+Nov 18 08:55:38 master1 systemd-logind[847]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 18 08:55:38 master1 systemd-logind[847]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 18 08:55:50 master1 login[860]: pam_unix(login:session): session opened for user donny(uid=1000) by LOGIN(uid=0)
+Nov 18 08:55:50 master1 systemd-logind[847]: New session 1 of user donny.
+Nov 18 08:55:50 master1 systemd: pam_unix(systemd-user:session): session opened for user donny(uid=1000) by (uid=0)
+Nov 18 08:56:16 master1 sshd[1220]: Accepted password for projects from 192.168.18.28 port 55237 ssh2
+Nov 18 08:56:16 master1 sshd[1220]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 08:56:16 master1 systemd-logind[847]: New session 3 of user projects.
+Nov 18 08:56:16 master1 systemd: pam_unix(systemd-user:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 08:56:29 master1 sudo: projects : TTY=pts/0 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 08:56:29 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 08:56:29 master1 su: (to root) root on pts/1
+Nov 18 08:56:29 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 08:56:52 master1 sudo:     root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Nov 18 08:56:52 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 08:57:10 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 08:57:11 master1 sudo:     root : TTY=pts/1 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+Nov 18 08:57:11 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 08:58:18 master1 groupadd[1605]: group added to /etc/group: name=docker, GID=999
+Nov 18 08:58:18 master1 groupadd[1605]: group added to /etc/gshadow: name=docker
+Nov 18 08:58:18 master1 groupadd[1605]: new group: name=docker, GID=999
+Nov 18 08:58:27 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 09:15:02 master1 sudo:     root : TTY=pts/1 ; PWD=/home/projects/belajar/awesome-compose/elasticsearch-logstash-kibana ; USER=root ; COMMAND=/usr/bin/systemctl restart systemd-resolved
+Nov 18 09:15:02 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 09:15:02 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 09:15:27 master1 sshd[2299]: Accepted password for projects from 192.168.18.28 port 55739 ssh2
+Nov 18 09:15:27 master1 sshd[2299]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 09:15:27 master1 systemd-logind[847]: New session 5 of user projects.
+Nov 18 09:15:33 master1 sudo: projects : TTY=pts/2 ; PWD=/home/projects/belajar/awesome-compose/elasticsearch-logstash-kibana ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 09:15:33 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 09:15:33 master1 su: (to root) root on pts/3
+Nov 18 09:15:33 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 09:17:01 master1 CRON[2397]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 09:17:01 master1 CRON[2397]: pam_unix(cron:session): session closed for user root
+Nov 18 09:23:48 master1 sudo:     root : TTY=pts/1 ; PWD=/home/projects/belajar/awesome-compose/elasticsearch-logstash-kibana ; USER=root ; COMMAND=/usr/sbin/ufw disable
+Nov 18 09:23:48 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 09:23:48 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 09:36:52 master1 sudo:    donny : TTY=tty1 ; PWD=/home/donny ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 09:36:52 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by donny(uid=1000)
+Nov 18 09:36:52 master1 su: (to root) root on pts/4
+Nov 18 09:36:52 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by donny(uid=0)
+Nov 18 09:37:25 master1 sshd[3357]: Accepted password for projects from 192.168.189.1 port 55879 ssh2
+Nov 18 09:37:25 master1 sshd[3357]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 09:37:25 master1 systemd-logind[847]: New session 7 of user projects.
+Nov 18 09:37:31 master1 sudo: projects : TTY=pts/5 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 09:37:31 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 09:37:31 master1 su: (to root) root on pts/6
+Nov 18 09:37:31 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 09:39:01 master1 sshd[3484]: Accepted password for projects from 192.168.189.1 port 55942 ssh2
+Nov 18 09:39:01 master1 sshd[3484]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 09:39:01 master1 systemd-logind[847]: New session 8 of user projects.
+Nov 18 09:58:44 master1 sudo:     root : TTY=pts/6 ; PWD=/home/projects/belajar/awesome-compose ; USER=root ; COMMAND=/usr/bin/less /var/log/auth.log
+Nov 18 09:58:44 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 09:58:58 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 10:17:01 master1 CRON[9536]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 10:17:01 master1 CRON[9536]: pam_unix(cron:session): session closed for user root
+Nov 18 11:17:01 master1 CRON[27465]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 11:17:01 master1 CRON[27465]: pam_unix(cron:session): session closed for user root
+Nov 18 11:55:43 master1 sshd[1220]: pam_unix(sshd:session): session closed for user projects
+Nov 18 11:55:43 master1 sshd[2299]: pam_unix(sshd:session): session closed for user projects
+Nov 18 11:55:43 master1 systemd-logind[847]: Session 5 logged out. Waiting for processes to exit.
+Nov 18 11:55:43 master1 systemd-logind[847]: Session 3 logged out. Waiting for processes to exit.
+Nov 18 11:55:43 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 11:55:43 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 11:55:43 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 11:55:43 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 11:55:43 master1 systemd-logind[847]: Removed session 5.
+Nov 18 11:55:43 master1 systemd-logind[847]: Removed session 3.
+Nov 18 12:17:01 master1 CRON[34300]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 12:17:01 master1 CRON[34300]: pam_unix(cron:session): session closed for user root
+Nov 18 12:23:52 master1 sshd[35158]: Accepted password for projects from 192.168.189.1 port 56495 ssh2
+Nov 18 12:23:52 master1 sshd[35158]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 12:23:52 master1 systemd-logind[847]: New session 12 of user projects.
+Nov 18 12:23:59 master1 sudo: projects : TTY=pts/0 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 12:23:59 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 12:23:59 master1 su: (to root) root on pts/1
+Nov 18 12:23:59 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 13:00:09 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 13:00:09 master1 sshd[35158]: pam_unix(sshd:session): session closed for user projects
+Nov 18 13:00:09 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 13:00:09 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 13:00:09 master1 sshd[35158]: pam_systemd(sshd:session): Failed to release session: Interrupted system call
+Nov 18 13:00:09 master1 sshd[3357]: pam_unix(sshd:session): session closed for user projects
+Nov 18 13:00:09 master1 sshd[3484]: pam_unix(sshd:session): session closed for user projects
+Nov 18 13:00:09 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 15:07:28 master1 sshd[879]: Server listening on 0.0.0.0 port 22.
+Nov 18 15:07:28 master1 sshd[879]: Server listening on :: port 22.
+Nov 18 15:07:28 master1 systemd-logind[848]: New seat seat0.
+Nov 18 15:07:28 master1 systemd-logind[848]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 18 15:07:28 master1 systemd-logind[848]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 18 15:10:43 master1 login[860]: pam_unix(login:session): session opened for user projects(uid=1001) by LOGIN(uid=0)
+Nov 18 15:10:43 master1 systemd-logind[848]: New session 1 of user projects.
+Nov 18 15:10:43 master1 systemd: pam_unix(systemd-user:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 15:11:21 master1 sudo: projects : TTY=tty1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt install net-tools
+Nov 18 15:11:21 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 15:11:30 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 15:13:08 master1 sudo: projects : TTY=tty1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 15:13:09 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 15:13:09 master1 su: (to root) root on pts/0
+Nov 18 15:13:09 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 15:15:47 master1 sshd[2552]: Accepted password for projects from 192.168.189.1 port 59638 ssh2
+Nov 18 15:15:47 master1 sshd[2552]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 15:15:47 master1 systemd-logind[848]: New session 3 of user projects.
+Nov 18 15:15:52 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 15:15:52 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 15:15:52 master1 su: (to root) root on pts/2
+Nov 18 15:15:52 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 15:17:01 master1 CRON[4639]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 15:17:01 master1 CRON[4639]: pam_unix(cron:session): session closed for user root
+Nov 18 15:24:27 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 15:24:27 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 15:24:32 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su
+Nov 18 15:24:32 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 15:24:32 master1 su: (to root) root on pts/2
+Nov 18 15:24:32 master1 su: pam_unix(su:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 15:24:49 master1 useradd[5891]: new group: name=test, GID=1002
+Nov 18 15:24:49 master1 useradd[5891]: new user: name=test, UID=1002, GID=1002, home=/home/test, shell=/bin/sh, from=/dev/pts/2
+Nov 18 15:24:52 master1 su: (to test) root on pts/2
+Nov 18 15:24:52 master1 su: pam_unix(su-l:session): session opened for user test(uid=1002) by projects(uid=0)
+Nov 18 15:24:57 master1 sudo: pam_unix(sudo:auth): authentication failure; logname=projects uid=1002 euid=0 tty=/dev/pts/2 ruser=test rhost=  user=test
+Nov 18 15:25:07 master1 sudo:     test : user NOT in sudoers ; TTY=pts/2 ; PWD=/home/test ; USER=root ; COMMAND=/usr/bin/su
+Nov 18 15:25:12 master1 sudo: pam_unix(sudo:auth): authentication failure; logname=projects uid=1002 euid=0 tty=/dev/pts/2 ruser=test rhost=  user=test
+Nov 18 15:26:09 master1 sshd[6050]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.189.1  user=root
+Nov 18 15:26:12 master1 sshd[6050]: Failed password for root from 192.168.189.1 port 60274 ssh2
+Nov 18 15:27:10 master1 sshd[6050]: Failed password for root from 192.168.189.1 port 60274 ssh2
+Nov 18 15:27:13 master1 sshd[6050]: Failed password for root from 192.168.189.1 port 60274 ssh2
+Nov 18 15:27:14 master1 sshd[6050]: Connection closed by authenticating user root 192.168.189.1 port 60274 [preauth]
+Nov 18 15:27:14 master1 sshd[6050]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.189.1  user=root
+Nov 18 15:27:56 master1 sudo: pam_unix(sudo:auth): conversation failed
+Nov 18 15:27:56 master1 sudo: pam_unix(sudo:auth): auth could not identify password for [test]
+Nov 18 15:27:56 master1 sudo:     test : user NOT in sudoers ; TTY=pts/2 ; PWD=/home/test ; USER=root ; COMMAND=/usr/bin/su
+Nov 18 15:27:58 master1 su: pam_unix(su-l:session): session closed for user test
+Nov 18 15:28:04 master1 sudo:     root : TTY=pts/2 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/apt update
+Nov 18 15:28:04 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 15:28:12 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 15:28:38 master1 useradd[6674]: new group: name=test2, GID=1003
+Nov 18 15:28:38 master1 useradd[6674]: new user: name=test2, UID=1003, GID=1003, home=/home/test2, shell=/bin/sh, from=/dev/pts/2
+Nov 18 15:28:52 master1 su: (to test2) root on pts/2
+Nov 18 15:28:52 master1 su: pam_unix(su-l:session): session opened for user test2(uid=1003) by projects(uid=0)
+Nov 18 15:28:56 master1 sudo: pam_unix(sudo:auth): authentication failure; logname=projects uid=1003 euid=0 tty=/dev/pts/2 ruser=test2 rhost=  user=test2
+Nov 18 15:29:05 master1 sudo:    test2 : user NOT in sudoers ; TTY=pts/2 ; PWD=/home/test2 ; USER=root ; COMMAND=/usr/bin/su
+Nov 18 15:29:07 master1 su: pam_unix(su-l:session): session closed for user test2
+Nov 18 15:36:45 master1 sshd[7889]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.189.1  user=root
+Nov 18 15:36:48 master1 sshd[7889]: Failed password for root from 192.168.189.1 port 60550 ssh2
+Nov 18 15:36:51 master1 sshd[7889]: Connection closed by authenticating user root 192.168.189.1 port 60550 [preauth]
+Nov 18 15:36:57 master1 sshd[7932]: Connection closed by authenticating user root 192.168.189.1 port 60551 [preauth]
+Nov 18 15:37:04 master1 sshd[7935]: Accepted password for projects from 192.168.189.1 port 60552 ssh2
+Nov 18 15:37:04 master1 sshd[7935]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 18 15:37:04 master1 systemd-logind[848]: New session 5 of user projects.
+Nov 18 16:05:26 master1 su: pam_unix(su:session): session closed for user root
+Nov 18 16:05:26 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 16:05:31 master1 sudo: projects : TTY=pts/1 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 18 16:05:31 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 18 16:05:31 master1 su: (to root) root on pts/2
+Nov 18 16:05:31 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 18 16:17:01 master1 CRON[13044]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 16:17:01 master1 CRON[13044]: pam_unix(cron:session): session closed for user root
+Nov 18 17:17:01 master1 CRON[38015]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 18 17:17:01 master1 CRON[38015]: pam_unix(cron:session): session closed for user root
+Nov 18 17:55:20 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 17:55:20 master1 sudo: pam_unix(sudo:session): session closed for user root
+Nov 18 17:55:20 master1 su: pam_unix(su-l:session): session closed for user root
+Nov 18 17:55:20 master1 sshd[7935]: pam_unix(sshd:session): session closed for user projects
+Nov 18 17:55:20 master1 sshd[2552]: pam_unix(sshd:session): session closed for user projects
+Nov 19 13:56:50 master1 systemd-logind[850]: New seat seat0.
+Nov 19 13:56:50 master1 systemd-logind[850]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 19 13:56:50 master1 systemd-logind[850]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
+Nov 19 13:56:50 master1 sshd[877]: Server listening on 0.0.0.0 port 22.
+Nov 19 13:56:50 master1 sshd[877]: Server listening on :: port 22.
+Nov 19 13:57:09 master1 sshd[1517]: Accepted password for projects from 192.168.189.1 port 53115 ssh2
+Nov 19 13:57:09 master1 sshd[1517]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 19 13:57:09 master1 systemd-logind[850]: New session 1 of user projects.
+Nov 19 13:57:09 master1 systemd: pam_unix(systemd-user:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 19 13:57:16 master1 login[869]: pam_unix(login:session): session opened for user projects(uid=1001) by LOGIN(uid=0)
+Nov 19 13:57:17 master1 systemd-logind[850]: New session 3 of user projects.
+Nov 19 13:57:28 master1 sudo: projects : TTY=pts/0 ; PWD=/home/projects ; USER=root ; COMMAND=/usr/bin/su -
+Nov 19 13:57:28 master1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by projects(uid=1001)
+Nov 19 13:57:28 master1 su: (to root) root on pts/1
+Nov 19 13:57:28 master1 su: pam_unix(su-l:session): session opened for user root(uid=0) by projects(uid=0)
+Nov 19 14:17:01 master1 CRON[1832]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 19 14:17:01 master1 CRON[1832]: pam_unix(cron:session): session closed for user root
+Nov 19 14:26:22 master1 sshd[877]: Received signal 15; terminating.
+Nov 19 14:26:22 master1 sshd[4215]: Server listening on 0.0.0.0 port 22.
+Nov 19 14:26:22 master1 sshd[4215]: Server listening on :: port 22.
+Nov 19 14:27:45 master1 sshd[8228]: Accepted password for projects from 192.168.189.1 port 53689 ssh2
+Nov 19 14:27:45 master1 sshd[8228]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 19 14:27:45 master1 systemd-logind[850]: New session 5 of user projects.
+Nov 19 14:28:44 master1 sshd[11639]: Accepted password for projects from 192.168.189.1 port 53714 ssh2
+Nov 19 14:28:44 master1 sshd[11639]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 19 14:28:44 master1 systemd-logind[850]: New session 6 of user projects.
+Nov 19 14:29:07 master1 sshd[8228]: pam_unix(sshd:session): session closed for user projects
+Nov 19 14:29:07 master1 systemd-logind[850]: Session 5 logged out. Waiting for processes to exit.
+Nov 19 14:29:07 master1 systemd-logind[850]: Removed session 5.
+Nov 19 14:29:08 master1 sshd[21709]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.189.1  user=root
+Nov 19 14:29:09 master1 sshd[21709]: Failed password for root from 192.168.189.1 port 53718 ssh2
+Nov 19 14:29:10 master1 sshd[21709]: Connection reset by authenticating user root 192.168.189.1 port 53718 [preauth]
+Nov 19 14:29:44 master1 sshd[11639]: pam_unix(sshd:session): session closed for user projects
+Nov 19 14:29:44 master1 systemd-logind[850]: Session 6 logged out. Waiting for processes to exit.
+Nov 19 14:29:44 master1 systemd-logind[850]: Removed session 6.
+Nov 19 14:30:28 master1 sshd[32335]: Accepted password for projects from 192.168.189.1 port 53727 ssh2
+Nov 19 14:30:28 master1 sshd[32335]: pam_unix(sshd:session): session opened for user projects(uid=1001) by (uid=0)
+Nov 19 14:30:28 master1 systemd-logind[850]: New session 7 of user projects.

@@ -7,15 +7,15 @@ services:
       - "9300:9300"
     volumes:
       - elk_data:/usr/share/elasticsearch/data/
-      - ./configs/elasticsearch/jvm.options:/usr/share/elasticsearch/config/jvm.options.d/jvm.options
-      - ./configs/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./all-service-config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./all-service-config/elasticsearch/jvm.options:/usr/share/elasticsearch/config/jvm.options.d/jvm.options # ini perlu untuk setting Heap Size
     environment:
       - discovery.type=single-node
       - http.host=0.0.0.0
       - transport.host=0.0.0.0
-      - xpack.security.enabled=false
+      - xpack.security.enabled=false # nyalakan untuk mengaktifkan autentikasi saat login kibana (5601) ataupun els (9200), password juga bisa di uncomment, tapi perlu downgrade ke 6.8 atau 7.10 untuk semua image tag nya
       - xpack.monitoring.enabled=true
-      - cluster.name=elasticsearch
+      - cluster.name=elasticsearch # bisa ganti sesuai keinginan 
       - bootstrap.memory_lock=true
 #      - ELASTIC_PASSWORD=CNk6jg4usvM3PdWN
 #      - ELASTICSEARCH_USERNAME=elastic
@@ -25,7 +25,7 @@ services:
       timeout: 10s
       retries: 3
     networks:
-      - elk
+      - elk_networks
 
   logstash:
     image: logstash:7.16.1
@@ -39,46 +39,64 @@ services:
       - "5044:5044"
       - "9600:9600"
     volumes:
-      - ./configs/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-      - ./configs/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./all-service-config/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./all-service-config/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./all-service-config/logstash/jvm.options:/usr/share/logstash/config/jvm.options
       - ls_data:/usr/share/logstash/data
     networks:
-      - elk
+      - elk_networks
     depends_on:
-      - elasticsearch
+      elasticsearch
+        condition: service_healthy
 
   kibana:
     image: kibana:7.16.1
     container_name: kibana
+    entrypoint: >
+      /bin/sh -c "
+      while ! curl -s http://elasticsearch:9200 >/dev/null; do
+        echo 'Tunggu Elasticsearch up...';
+        sleep 15;
+      done;
+      /usr/local/bin/docker-entrypoint;
+      "
     ports:
       - "5601:5601"
     volumes:
-      - ./configs/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+      - ./all-service-config/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
       - kb_data:/usr/share/kibana/data
     networks:
-      - elk
+      - elk_networks
     depends_on:
-      - elasticsearch
+      elasticsearch
+        condition: service_healthy
 
   filebeat:
     image: elastic/filebeat:7.16.1
     container_name: filebeat
     user: root
-    command: ["filebeat", "-e", "--strict.perms=false"]
+    command: >
+      /bin/sh -c "
+      filebeat setup -e;
+      filebeat -e --strict.perms=false;
+      "
     volumes:
-      - ./configs/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./all-service-config/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /var/log/syslog:/var/log/syslog:ro
-      - /var/log/auth.log:/var/log/auth.log:ro
+      - ./syslog:/var/log/syslog:ro
+      - ./auth.log:/var/log/auth.log:ro
+      - ./all-service-config/filebeat-setup.sh:/usr/local/bin/filebeat-setup.sh:ro
     networks:
-      - elk
+      - elk_networks
     depends_on:
-      - elasticsearch
-      - kibana
+      elasticsearch:
+        condition: service_healthy
+      kibana:
+        condition: service_started
 
 networks:
-  elk:
+  elk_networks:
     driver: bridge
 
 volumes:
