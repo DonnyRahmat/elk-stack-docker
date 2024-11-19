@@ -67,18 +67,14 @@ services:
     image: elastic/filebeat:7.16.1
     container_name: filebeat
     user: root
-    command: >
-      /bin/sh -c "
-      filebeat setup -e;
-      filebeat -e --strict.perms=false;
-      "
     volumes:
       - ./all-service-config/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./syslog:/var/log/syslog:ro
       - ./auth.log:/var/log/auth.log:ro
-      - ./all-service-config/filebeat-setup.sh:/usr/local/bin/filebeat-setup.sh:ro
+      - ./all-service-config/filebeat/filebeat-entrypoint.sh:/usr/local/bin/filebeat-entrypoint.sh:ro
+    entrypoint: ["/usr/local/bin/filebeat-entrypoint.sh", "filebeat", "-e", "--strict.perms=false"]
     networks:
       - elk_networks
     depends_on:
