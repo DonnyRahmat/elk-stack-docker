@@ -46,7 +46,7 @@ services:
     networks:
       - elk_networks
     depends_on:
-      elasticsearch
+      elasticsearch:
         condition: service_healthy
 
   kibana:
@@ -68,7 +68,7 @@ services:
     networks:
       - elk_networks
     depends_on:
-      elasticsearch
+      elasticsearch:
         condition: service_healthy
 
   filebeat:
